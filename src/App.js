@@ -1,10 +1,9 @@
-import ModalPage from "./pages/chapter2/2-2-modal";
+import SignUpPage from "./pages/practice/sign-up";
 
 function App() {
   return (
     <div>
-      <ModalPage />
-      ss
+      <SignUpPage />
     </div>
   );
 }

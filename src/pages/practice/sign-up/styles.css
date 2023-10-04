@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../public/signUp/ba.png");
+  aspect-ratio: 16/9;
+}
+
+.SignUpWrapper {
+  background-color: rgba(168, 168, 168, 0.9);
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  border-bottom: 1px solid white;
+  padding: 15px;
+  width: 230px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.text {
+  font-size: 10px;
+  color: white;
+  margin-bottom: 3px;
+}
+.Input {
+  width: 170px;
+  border-radius: 5px;
+  border: 1.5px solid white;
+  background-color: rgba(168, 168, 168, 0.9);
+}
+.input-box {
+  margin-bottom: 15px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+}
+.submit {
+  width: 170px;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: gray;
+  cursor: pointer;
+}
+.warringMessage {
+  font-size: 2px;
+  color: rgb(255, 87, 87);
+  margin-top: 3px;
+  margin-left: 4px;
+  display: none;
+}

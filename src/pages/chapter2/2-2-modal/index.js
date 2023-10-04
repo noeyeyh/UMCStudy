@@ -1,12 +1,12 @@
 import "./styles.css";
 
 export default function ModalPage() {
-  const open = document.getElementById("open");
-  const close = document.getElementById("close");
-  const modal = document.getElementById("modal");
-
-  const onClickOpen = () => {};
+  const onClickOpen = async () => {
+    const modal = document.getElementById("Modal");
+    modal.style.display = "flex";
+  };
   const onClickClose = () => {
+    const modal = document.getElementById("Modal");
     modal.style.display = "none";
   };
 
@@ -18,7 +18,7 @@ export default function ModalPage() {
         <button onClick={onClickOpen} id="open">
           버튼 열기
         </button>
-        <div id="Modal" class="ModalDiv" style="display:none;">
+        <div id="Modal" class="ModalDiv">
           <div class="Modal">
             <h2>안녕하세요</h2>
             <p>모달 내용은 어쩌고 저쩌고..</p>
