@@ -1,10 +1,10 @@
-import SignUpPage from "./pages/practice/sign-up";
+import HW2 from "./Components/HW2";
 
 function App() {
   return (
-    <div>
-      <SignUpPage />
-    </div>
+    <>
+      <HW2 />
+    </>
   );
 }
 
