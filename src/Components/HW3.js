@@ -18,6 +18,7 @@ export const HW3 = () => {
     </MovieLayout>
   );
 };
+
 const MovieLayout = styled.div`
   display: flex;
   margin: 0px;
