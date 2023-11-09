@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { movies } from "../Data/movieDummy";
-import { Movie } from "./Movie.js";
+import { movies } from "../Data/movieDummy.js";
+import { Movie } from "./pages/Movie.jsx";
 
 export const HW3 = () => {
   return (
