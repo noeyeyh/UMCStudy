@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Movies } from "./components/pages/Movies";
-import { Celebrity } from "./components/pages/Celebrity";
-import { Header } from "./components/Header";
-import { TV } from "./components/pages/TV";
-import { Home } from "./components/pages/Home";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Movies } from './components/pages/Movies';
+import { Celebrity } from './components/pages/Celebrity';
+import { Header } from './components/Header';
+import { TV } from './components/pages/TV';
+import { Home } from './components/pages/Home';
+import './App.css';
 
 function App() {
   return (

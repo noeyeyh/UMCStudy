@@ -1,8 +1,12 @@
-import { View,Text } from "react";
-import styled from "styled-components";
+import { View, Text } from 'react';
+import styled from 'styled-components';
 
 export const Celebrity = () => {
-  return (
-    <div><h1>Celebrity</h1></div>
-  )
-}
+  return <ContentLayout>Celebrity</ContentLayout>;
+};
+const ContentLayout = styled.div`
+  height: 100vh;
+  padding: 12px;
+  color: white;
+  background-color: #464b8d;
+`;

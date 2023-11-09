@@ -23,7 +23,9 @@ export const Movies = () => {
   const MovieLayout = styled.div`
     display: flex;
     margin: 0px;
+    height: 100vh;
     background-color: #22254b;
     flex-wrap: wrap;
+    align-content: flex-start;
   `;
   
