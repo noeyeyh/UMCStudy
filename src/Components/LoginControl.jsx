@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const LoginControl = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleClick = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
+  //   const handleClick = () => {
+  //     setIsLoggedIn(!isLoggedIn);
+  //   };
   const handleLoginClick = () => {
     setIsLoggedIn(true);
   };
@@ -13,10 +13,13 @@ export const LoginControl = () => {
     setIsLoggedIn(false);
   };
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    <div
+      style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+    >
       {/* <LoginButton onClick={handleClick}> */}
       <LoginButton
         onClick={isLoggedIn == false ? handleLoginClick : handleLogoutClick}
+        // onClick={handleClick}
       >
         {isLoggedIn ? '로그인' : '로그아웃'}
       </LoginButton>
@@ -31,7 +34,7 @@ const LoginButton = styled.button`
   margin-left: 24px;
   background-color: #fff;
   color: #000;
-  padding: 0px 20px;
+  padding: 6px 20px;
   border: none;
   cursor: pointer;
   border-radius: 15px;

@@ -1,10 +1,17 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const Movie = ({ backImg, title, star, detail }) => {
   const [isHovering, setIsHovering] = useState(false);
+  const navigate = useNavigate();
 
-  const ImgUrlBase = "https://image.tmdb.org/t/p/w500/";
+  const onClickImg = () => {
+    navigate(`/movie/${title}`, {
+      state: { backImg },
+    });
+  };
+  const ImgUrlBase = 'https://image.tmdb.org/t/p/w500/';
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -14,6 +21,7 @@ export const Movie = ({ backImg, title, star, detail }) => {
   };
   return (
     <MovieContainer
+      onClick={onClickImg}
       onMouseOver={() => handleMouseOver()}
       onMouseOut={() => handleMouseOut()}
     >

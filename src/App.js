@@ -5,6 +5,7 @@ import { Header } from './components/Header';
 import { TV } from './components/pages/TV';
 import { Home } from './components/pages/Home';
 import './App.css';
+import MovieDetail from './components/pages/MovieDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="tv" element={<TV />} />
         <Route path="movies" element={<Movies />} />
         <Route path="celebrity" element={<Celebrity />} />
+        <Route path="/movie/:name" element={<MovieDetail />} />
       </Routes>
     </BrowserRouter>
   );
