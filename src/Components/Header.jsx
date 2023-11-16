@@ -1,5 +1,6 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { LoginControl } from './LoginControl';
 
 export const Header = () => {
   return (
@@ -52,6 +53,7 @@ export const Header = () => {
         >
           인물
         </Link>
+        <LoginControl />
       </ItemList>
     </HeaderBase>
   );
