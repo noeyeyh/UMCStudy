@@ -8,6 +8,7 @@ import './App.css';
 import MovieDetail from './components/pages/MovieDetail';
 import { NotFound } from './components/pages/NotFound';
 import Weather from './components/pages/Weather';
+import Login from './components/pages/Login';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="tv" element={<TV />} />
         <Route path="movies" element={<Movies />} />
         <Route path="celebrity" element={<Celebrity />} />
+        <Route path="login" element={<Login />} />
         <Route path="/movie/:name" element={<MovieDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

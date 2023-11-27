@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import './Login.css'; // Import your CSS file
+import './Login.css';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [user, setUser] = useState({
     id: '',
     password: '',
   });
-
+  const navigate = useNavigate();
   const handleLogin = () => {
     if (user.id === '') {
       alert('아이디를 입력해주세요.');
@@ -17,7 +18,8 @@ const Login = () => {
       alert('비밀번호를 입력해주세요.');
       return;
     }
-    alert('로그인 성공!');
+    alert('로그인을 성공했습니다!');
+    navigate('/');
   };
 
   return (
@@ -25,7 +27,7 @@ const Login = () => {
       {/* <div className="gray-background"></div> */}
       <MainContainer>
         <LoginContainer>
-          <LoginLogo>UMC 7주차 로그인</LoginLogo>
+          <LoginLogo>이메일과 비밀번호를 입력해주세요</LoginLogo>
           <TextContainer>
             <MyInput
               type="text"
@@ -61,12 +63,15 @@ export default Login;
 
 const LoginLogo = styled.h1`
   margin-bottom: 60px;
+  font-size: 24px;
 `;
 const MainContainer = styled.div`
   display: flex;
   width: 100%;
   height: 98vh;
   margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
   font-family: 'NanumSquare';
 `;
 const LoginContainer = styled.div`
@@ -75,7 +80,7 @@ const LoginContainer = styled.div`
   align-items: center;
   padding: 60px 100px;
   border: 2px solid #e1e2e3;
-  border-radius: 5%;
+  border-radius: 8px;
   background-color: #fff;
   text-align: center;
 `;
@@ -87,7 +92,7 @@ const MyInput = styled.input`
   width: 337px;
   height: 36px;
   padding-left: 15px;
-  border-radius: 20px;
+  border-radius: 8px;
   border: 2px solid #cccccc;
   background-color: #ffffff;
   font-size: 11pt;
@@ -104,7 +109,7 @@ const LoginButton = styled.button`
   width: 100%;
   height: 54px;
   border: 0;
-  border-radius: 30px;
+  border-radius: 8px;
   background-color: #c2c2c2;
   font-size: 14pt;
   font-weight: 1000;
