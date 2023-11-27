@@ -37,6 +37,18 @@ export const Header = () => {
             marginLeft: 12,
             fontWeight: 600,
           }}
+          to="/weather"
+        >
+          날씨
+        </Link>
+        <Link
+          exact="true"
+          style={{
+            textDecoration: 'none',
+            color: '#fff',
+            marginLeft: 12,
+            fontWeight: 600,
+          }}
           to="/tv"
         >
           TV 프로그램

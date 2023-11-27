@@ -7,6 +7,7 @@ import { Home } from './components/pages/Home';
 import './App.css';
 import MovieDetail from './components/pages/MovieDetail';
 import { NotFound } from './components/pages/NotFound';
+import Weather from './components/pages/Weather';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Home />} />
+        <Route path="weather" element={<Weather />} />
         <Route path="tv" element={<TV />} />
         <Route path="movies" element={<Movies />} />
         <Route path="celebrity" element={<Celebrity />} />
