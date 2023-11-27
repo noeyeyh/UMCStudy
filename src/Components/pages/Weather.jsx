@@ -6,27 +6,16 @@ function Weather() {
   const [location, setLocation] = useState('');
   const [result, setResult] = useState({});
   const [error, setError] = useState(null);
-  const API_KEY = '0aa0394a87c92e05f6c317f65de68fa8';
-  // 각자 개인의 API KEY를 발급받아 사용해주세요.
-  // 방법 : Open Weather Map API 가입 후 API_KEY 발급 받기
+  const API_KEY = 'daad2fbe05f3de020251a290a477db88';
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`;
   const searchWeather = async (e) => {
     if (e.key === 'Enter') {
       try {
-        /*
-        const data 에 axios 를 활용하여 url 을 get 하는 코드를 작성하고
-        위에 본인이 작성한 코드의 data 를 setResult의 값으로 넣기.
-        data가 잘 뜨는지 확인을 위해선 console.log(data); 로 console확인. 콘솔 확인법은 구글링 해볼것.
-        
-        윗말이 이해안되면 axios 사용법 구글링 하든 gpt를 사용하든 해서 코드를 작성해보세요~
-        */
         axios.get(url).then((data) => {
           setResult(data);
           console.log(data);
         });
-        //  setResult(data)
-        //  console.log(data);
       } catch (err) {
         setError(err);
       }
@@ -34,9 +23,9 @@ function Weather() {
   };
 
   return (
-    <AppWrap>
-      <div className="appContentWrap">
-        <input
+    <Container>
+      <Content>
+        <MyInput
           placeholder="도시를 입력하세요"
           value={location}
           onChange={(e) => setLocation(e.target.value)}
@@ -53,29 +42,28 @@ function Weather() {
             <div className="sky">{result.data.weather[0].main}</div>
           </ResultWrap>
         )}
-      </div>
-    </AppWrap>
+      </Content>
+    </Container>
   );
 }
 
 export default Weather;
 
-const AppWrap = styled.div`
+const Container = styled.div`
   width: 100vw;
   height: 100vh;
-
-  .appContentWrap {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    padding: 20px;
-  }
-  input {
-    padding: 16px;
-    border: 2px black solid;
-    border-radius: 16px;
-  }
+`;
+const Content = styled.div`
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px;
+`;
+const MyInput = styled.input`
+  padding: 16px;
+  border: 2px black solid;
+  border-radius: 16px;
 `;
 
 const ResultWrap = styled.div`
@@ -83,7 +71,6 @@ const ResultWrap = styled.div`
   border: 1px black solid;
   padding: 10px;
   border-radius: 8px;
-
   .city {
     font-size: 24px;
   }
