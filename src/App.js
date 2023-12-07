@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Movies } from './components/pages/Movies';
-import { Celebrity } from './components/pages/Celebrity';
-import { Header } from './components/Header';
-import { TV } from './components/pages/TV';
-import { Home } from './components/pages/Home';
+import { Movie } from './Components/pages/Movie';
+import { Celebrity } from './Components/pages/Celebrity';
+import { Header } from './Components/Header';
+import { TV } from './Components/pages/TV';
+import { Home } from './Components/pages/Home';
 import './App.css';
-import MovieDetail from './components/pages/MovieDetail';
-import { NotFound } from './components/pages/NotFound';
-import Weather from './components/pages/Weather';
-import Login from './components/pages/Login';
+import MovieDetail from './Components/pages/MovieDetail';
+import { NotFound } from './Components/pages/NotFound';
+import Weather from './Components/pages/Weather';
+import Login from './Components/pages/Login';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="weather" element={<Weather />} />
         <Route path="tv" element={<TV />} />
-        <Route path="movies" element={<Movies />} />
+        <Route path="movies" element={<Movie />} />
         <Route path="celebrity" element={<Celebrity />} />
         <Route path="login" element={<Login />} />
         <Route path="/movie/:name" element={<MovieDetail />} />
